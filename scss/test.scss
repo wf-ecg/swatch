@@ -67,7 +67,6 @@ p {
 }
 .hd {
     border: 0;
-    box-shadow: none;
     clear: both;
     font-size: 26px;
     margin-bottom: -1rem;
@@ -84,8 +83,9 @@ br {
     clear: left;
 }
 section {
+    border-top: 1px solid $hilite;
     box-shadow: 1px 2px 3px $shal;
-    margin: 1rem;
+    padding: 1rem;
     margin-left: -14rem;
     margin-right: -99rem;
     padding-left: 15rem;
