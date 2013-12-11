@@ -1,0 +1,40 @@
+/* fun */
+@import "__def";
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+//funcs
+
+@function gM ($num: 1) {
+    @return $rem * $num;
+}
+
+@mixin dpix ($prop, $rem) {
+    #{$prop}: $rem * 13px;
+    #{$prop}: $rem * 1rem;
+}
+
+@mixin outline ($width: 4, $color: $hilite) {
+    outline: {
+        color: yellow; /* fallback */
+        color: $color;
+        offset: $width * -0.5px;
+        style: auto;
+        width: $width * 1px;
+    }
+}
+
+@mixin setTrans($color, $opacity: 0.5) {
+    background: $color; /* fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin vgrad ($C1: white, $C2: black) {
+    background-color: $C2;
+    @include background-image( linear-gradient(top, $C1 20%, $C2 100%) );
+}
+
+@mixin diagrad ($C1: white, $C2: black) {
+    background-color: $C2;
+    @include background-image( linear-gradient(top left, $C1 0%, $C2 100%) );
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //

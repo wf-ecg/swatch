@@ -1,0 +1,168 @@
+/* TEST */
+@import "__mix";
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+* {
+    -webkit-user-drag: none;
+    @include user-select(none);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    @include diagrad();
+    background-color: gray;
+    color: rgba(0,0,0,0.8);
+    font-family: 'arial black';
+    overflow: hidden;
+    padding: 1rem;
+}
+body div {
+    background-image: url("data:image/png;base64,
+    iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAMAAACEE47CAAAAVFBMVEVMTExERESqqqqHh4ednZ
+    1DQ0N6enqPj498fHy1tbVQUFDDw8M6Ojo0NDRmZmZsbGycnJxNTU0WFhZra2uZmZloaGhCQkJx
+    cXFXV1dcXFwXFxdPT08Zj9pkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPA
+    AAAcJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAQAAADiNfZLRbtsgFIZfBdGbTpoNODGtUd3Kshut
+    F56qNFJ762DaoNSAgCxuXm0Xe6S9wnAaZ9OU1uKCc/i/wzn4v7rpTcPXwoOleJEqh79//oJAtj
+    l8TGtcm1Ks5LedFQ+77wu+W/OshTfX4KpnfWc64RvQd6/KsT6HTauXgoX9kEYQ7CV+ncNiOABP
+    9T0otRUgjScRx4QASmMyTSklX0GCSYJwWDQiU5ZSllyAwwfDbbZ9ZvNqdrgrRDlceW8YQtvtNt
+    5OYm1fEMmybKiRJFFQRO5N+aaPlDsbK1TCcSuNl1qBIW6WeuNzCMcROnMsq1y8HyfmukN9YxCJ
+    MfpHWNefS7vuqHZ+Lp4/V7vFmxFoLpzeWC6C/GyADSutaLy2C61fx1e8X2mv3UobUD5QcF43XK
+    oh8WVP1DW7U843iou7KochE0vZsqwqE1pgnNLkgpDbSVGm5DLFtxWdYVpkdGQrzTedUH5k278s
+    +ZAdzPBOCyt/iHZmdQf2QzN5oheSTacFvsxSitPTvbyz7YleDmzxIYtCM+i/Xz2mgn+G7dG4IT
+    haX6jgdxuM/QdWvfJgK7ugPAAAACtJREFUGFcFwYUBACAAA6DZ3a3//ynAQ+zs+IFkwy7VAqhh
+    5cVZ0akmSOR+G0IBgffMFWsAAAAASUVORK5CYII=");
+
+    border: 3px outset gray;
+    border-radius: 9px;
+    height: 90%;
+    margin-left: 12rem;
+    width: 63rem;
+}
+p {
+    background-color: rgba(222,222,222,0.2);
+    border: 3px dashed transparent;
+    border-radius: 0 18px 0 18px;
+    box-shadow: 1px 2px 3px $shal;
+    float: left;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    margin: 4px 8px;
+    min-width: 6rem;
+    padding: 5px 15px;
+    text-shadow: 0 0 1px white, 0 0 1px white,
+    0 0 1px white, 0 0 1px white, 0 0 1px white,
+    0 0 1px white, 0 0 1px white, 0 0 1px black;
+
+    &:hover {
+        border: 3px dashed black;
+    }
+    &.mover {
+        border: 3px dashed white;
+        box-shadow: 2px 4px 6px $shad;
+        opacity: 0.8;
+    }
+}
+.hd {
+    border: 0;
+    box-shadow: none;
+    clear: both;
+    font-size: 26px;
+    margin-bottom: -1rem;
+    margin-left: -12rem;
+    opacity: 0.8;
+    padding-top: 0;
+
+    &:hover {
+        border: 0;
+        cursor: default;
+    }
+}
+br {
+    clear: left;
+}
+section {
+    box-shadow: 1px 2px 3px $shal;
+    margin: 1rem;
+    margin-left: -14rem;
+    margin-right: -99rem;
+    padding-left: 15rem;
+    @include clearfix();
+}
+.notes {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    p {
+        float: right;
+        clear: both;
+        display: inline;
+    }
+}
+/* */
+._wf_gray         { background-color: $wf_gray;       }
+._wf_red          { background-color: $wf_red;        }
+._wf_yellow       { background-color: $wf_yellow;     }
+._a_d_red         { background-color: $a_d_red;       }
+._a_warmred       { background-color: $a_warmred;     }
+._a_black         { background-color: $a_black;       }
+._a_d_coolgray    { background-color: $a_d_coolgray;  }
+._a_m_coolgray    { background-color: $a_m_coolgray;  }
+._a_l_coolgray    { background-color: $a_l_coolgray;  }
+._a_ebony         { background-color: $a_ebony;       }
+._a_green         { background-color: $a_green;       }
+._a_magenta       { background-color: $a_magenta;     }
+._a_orange        { background-color: $a_orange;      }
+._a_plum          { background-color: $a_plum;        }
+._a_teal          { background-color: $a_teal;        }
+._a_d_ebony       { background-color: $a_d_ebony;     }
+._a_d_green       { background-color: $a_d_green;     }
+._a_d_magenta     { background-color: $a_d_magenta;   }
+._a_d_orange      { background-color: $a_d_orange;    }
+._a_d_plum        { background-color: $a_d_plum;      }
+._a_d_teal        { background-color: $a_d_teal;      }
+._e_d_warmgray    { background-color: $e_d_warmgray;  }
+._e_m_warmgray    { background-color: $e_m_warmgray;  }
+._e_amber         { background-color: $e_amber;       }
+._e_aqua          { background-color: $e_aqua;        }
+._e_blue          { background-color: $e_blue;        }
+._e_brown         { background-color: $e_brown;       }
+._e_eggplant      { background-color: $e_eggplant;    }
+._e_purple        { background-color: $e_purple;      }
+._e_spruce        { background-color: $e_spruce;      }
+._e_d_amber       { background-color: $e_d_amber;     }
+._e_d_aqua        { background-color: $e_d_aqua;      }
+._e_d_blue        { background-color: $e_d_blue;      }
+._e_d_brown       { background-color: $e_d_brown;     }
+._e_d_eggplant    { background-color: $e_d_eggplant;  }
+._e_d_purple      { background-color: $e_d_purple;    }
+._e_d_spruce      { background-color: $e_d_spruce;    }
+._n_d_gray        { background-color: $n_d_gray;      }
+._n_l_gray        { background-color: $n_l_gray;      }
+._n_air           { background-color: $n_air;         }
+._n_aquablue      { background-color: $n_aquablue;    }
+._n_breeze        { background-color: $n_breeze;      }
+._n_khaki         { background-color: $n_khaki;       }
+._n_stone         { background-color: $n_stone;       }
+._cool            { background-color: $cool;          }
+._cool3           { background-color: $cool3;         }
+._cool2           { background-color: $cool2;         }
+._cool1           { background-color: $cool1;         }
+._cool0           { background-color: $cool0;         }
+._warm            { background-color: $warm;          }
+._warm3           { background-color: $warm3;         }
+._warm2           { background-color: $warm2;         }
+._warm1           { background-color: $warm1;         }
+._warm0           { background-color: $warm0;         }
+._gray            { background-color: $gray;          }
+._headA           { background-color: $headA;         }
+._headB           { background-color: $headB;         }
+._headC           { background-color: $headC;         }
+._shad            { background-color: $shad;          }
+._shal            { background-color: $shal;          }
+._hilite          { background-color: $hilite;        }
+._link            { background-color: $link;          }
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //

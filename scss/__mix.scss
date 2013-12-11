@@ -1,0 +1,31 @@
+/* mix */
+@import "__fun";
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+@mixin primeGrad1 () {
+    @include background-image( linear-gradient(bottom, $cool2 0%, $cool3 100%) );
+}
+@mixin primeGrad2 () {
+    @include background-image( linear-gradient(bottom, $cool2 0%, $cool1 100%) );
+}
+@mixin bgrad () {
+    @include background-image( linear-gradient(top, white 33%, $beige 100%) );
+}
+
+@mixin nosel () {
+    -webkit-user-drag: none;
+    @include user-select(none);
+}
+
+@mixin clearfix () {
+    &:after {
+        clear: both;
+        content: " ";
+        display: table;
+        /* clearfix */
+    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+//* >^º!º^< */
