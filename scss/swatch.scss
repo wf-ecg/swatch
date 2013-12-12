@@ -52,9 +52,9 @@ p {
     margin: 4px 8px;
     min-width: 6rem;
     padding: 5px 15px;
-    text-shadow: 0 0 1px white, 0 0 1px white,
-    0 0 1px white, 0 0 1px white, 0 0 1px white,
-    0 0 1px white, 0 0 1px white, 0 0 1px black;
+
+//  @include stroke();
+    @include foreshad();
 
     &:hover {
         border: 3px dashed black;
@@ -90,6 +90,9 @@ section {
     margin-right: -99rem;
     padding-left: 15rem;
     @include clearfix();
+    &:after {
+        font-size: 0;
+    }
 }
 .notes {
     position: absolute;

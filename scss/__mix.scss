@@ -12,6 +12,9 @@
     @include background-image( linear-gradient(top, white 33%, $beige 100%) );
 }
 
+//@include text-shadow($hoff, $voff, $blur, $spread, $color);
+//@include  box-shadow($hoff, $voff, $blur, $spread, $inset, $color);
+
 @mixin nosel () {
     -webkit-user-drag: none;
     @include user-select(none);

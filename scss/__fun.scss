@@ -36,5 +36,39 @@
     background-color: $C2;
     @include background-image( linear-gradient(top left, $C1 0%, $C2 100%) );
 }
+@mixin fauxshad ($L1: 1px, $C1: black) {
+    color: white;
+    -webkit-text-stroke: $L1 $C1;
+    text-shadow:
+    3*$L1 3*$L1 0 $C1,
+    2*$L1 2*$L1 0 $C1,
+      $L1 2*$L1 0 $C1,
+    2*$L1   $L1 0 $C1,
+      $L1   $L1 0 $C1,
+     -$L1   $L1 0 $C1,
+     -$L1  -$L1 0 $C1,
+      $L1  -$L1 0 $C1,
+        0  -$L1 0 $C1;
+}
+@mixin stroke ($L1: 1px, $C1: white) {
+   text-shadow:
+     $L1   $L1  0  $C1,
+       0   $L1  0  $C1,
+    -$L1   $L1  0  $C1,
+    -$L1     0  0  $C1,
+    -$L1  -$L1  0  $C1,
+     $L1  -$L1  0  $C1;
+}
+@mixin foreshad ($L1: 1px, $C1: white) {
+    text-shadow:
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1,
+    0 0 $L1 $C1;
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
