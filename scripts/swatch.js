@@ -1,3 +1,6 @@
+/*jslint es5:true, white:false */
+/*globals $ */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 $('p:not(.static)').drags();
 
