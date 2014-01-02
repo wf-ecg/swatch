@@ -8,4 +8,5 @@ $('section').drags({
     handle:'.static'
 });
 
-$('p:not(.static)').track();
+$('p:not(.static):not(.etc').track();
+$('p.etc').customic();
