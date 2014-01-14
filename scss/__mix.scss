@@ -3,10 +3,10 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 @mixin primeGrad1 () {
-    @include background-image( linear-gradient(bottom, $cool2 0%, $cool3 100%) );
+    @include background-image( linear-gradient(bottom, $norm_3 0%, $norm 100%) );
 }
 @mixin primeGrad2 () {
-    @include background-image( linear-gradient(bottom, $cool2 0%, $cool1 100%) );
+    @include background-image( linear-gradient(bottom, $norm_3 0%, $norm_4 100%) );
 }
 @mixin bgrad () {
     @include background-image( linear-gradient(top, white 33%, $beige 100%) );
