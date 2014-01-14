@@ -48,12 +48,20 @@ $cool3: #777788;
 $cool2: #cdcdd3;
 $cool1: #ecf0f2;
 $cool0: white;
-
+$norm: #777788; // was $cool3
 $warm:  $e_d_warmgray;
 $warm3: $e_m_warmgray;
 $warm2: #b6b3ac;
 $warm1: #ebeae2;
 $warm0: #f5f5f1;
+
+$cool_5: lighten($cool, 57%); // was $cool0
+$norm_3: lighten($norm, 30%); // was $cool2
+$norm_4: lighten($norm, 40%); // was $cool1
+$warm_2: lighten($warm, 20%); // was $warm3
+$warm_3: lighten($warm, 37%); // was $warm2
+$warm_5: lighten($warm, 53%); // was $warm1
+$warm_6: lighten($warm, 61%); // was $warm0
 
 $headA: $a_orange;
 $headB: $a_green;
