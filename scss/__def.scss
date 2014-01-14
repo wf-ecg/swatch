@@ -44,17 +44,18 @@ $link:  #3366cc; //$blue
 $gray:  $wf_gray;
 
 $cool:  $e_d_blue;
-$cool_5: lighten($cool, 57%);
+$cool_5: lighten($cool, 60%);
 
 $norm:  #777788;
+$norm_2: lighten($norm, 20%);
 $norm_3: lighten($norm, 30%);
-$norm_4: lighten($norm, 40%);
+$norm_4: lighten($norm, 45%);
 
 $warm:  $e_d_warmgray;
-$warm_2: lighten($warm, 20%);
-$warm_3: lighten($warm, 37%);
+$warm_2: lighten($warm, 14%);
+$warm_3: lighten($warm, 33%);
 $warm_5: lighten($warm, 53%);
-$warm_6: lighten($warm, 61%);
+$warm_6: lighten($warm, 60%);
 
 $headA: $a_orange;
 $headB: $a_green;
