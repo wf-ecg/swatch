@@ -12,8 +12,21 @@
     @include background-image( linear-gradient(top, white 33%, $beige 100%) );
 }
 
-//@include text-shadow($hoff, $voff, $blur, $spread, $color);
-//@include  box-shadow($hoff, $voff, $blur, $spread, $inset, $color);
+@mixin strokes($L: 1px, $C1: rgba(255, 255, 255, 0.333)) {
+    $N: $L * (-2);
+    $P: $L * 1;
+    $Z: 0;
+    text-shadow:
+    $P  $Z  $P/3  $C1,
+    $Z  $P  $P/3  $C1,
+    $P  $P  $P/3  $C1,
+    $N  $Z  $P/3  $C1,
+    $Z  $N  $P/3  $C1,
+    $N  $P  $P/3  $C1,
+    $P  $N  $P/3  $C1,
+    $N  $N  $P/3  $C1,
+    $Z  $Z  $P/3  $C1;
+}
 
 @mixin nosel () {
     -webkit-user-drag: none;
@@ -28,7 +41,14 @@
         /* clearfix */
     }
 }
-
+@mixin smoothing ($kind: subpixel-antialiased) {
+    -webkit-font-smoothing: $kind;
+    -moz-osx-font-smoothing: $kind;
+    -moz-font-smoothing: $kind;
+    -ms-font-smoothing: $kind;
+    -o-font-smoothing: $kind;
+    font-smoothing: $kind;
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 //* >^º!º^< */

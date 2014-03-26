@@ -3,10 +3,9 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 * {
     -webkit-user-drag: none;
+    @include box-sizing(border-box);
     @include user-select(none);
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include smoothing(antialiased);
 }
 html, body {
     height: 100%;
@@ -18,6 +17,13 @@ body {
     font-family: 'arial black';
     overflow: hidden;
     padding: 1rem;
+
+    @include backface-visibility( hidden );
+    @include perspective( 100 );
+    @include transform( scale(1) translate3d(0,0,0) rotate(0deg) );
+    @include transform-style( preserve-3d );
+    @include transition( all 0.125s ease-out 0 );
+
 }
 body div {
     background-image: url("data:image/png;base64,
@@ -42,19 +48,16 @@ body div {
     width: 63rem;
 }
 p {
+    @include strokes();
     background-color: rgba(222,222,222,0.2);
     border: 3px dashed transparent;
     border-radius: 0 18px 0 18px;
     box-shadow: 1px 2px 3px $shal;
     float: left;
     font-size: 16px;
-    letter-spacing: -0.5px;
     margin: 4px 8px;
     min-width: 6rem;
     padding: 5px 15px;
-
-//  @include stroke();
-    @include foreshad();
 
     &:hover {
         border: 3px dashed black;
@@ -71,7 +74,6 @@ p {
     font-size: 26px;
     margin-bottom: -1rem;
     margin-left: -12rem;
-    opacity: 0.8;
     padding-top: 0;
 
     &:hover {
@@ -83,13 +85,14 @@ br {
     clear: left;
 }
 section {
+    @include clearfix();
     border-top: 1px solid $hilite;
     box-shadow: 1px 2px 3px $shal;
-    padding: 1rem;
     margin-left: -14rem;
     margin-right: -99rem;
+    padding: 1rem;
     padding-left: 15rem;
-    @include clearfix();
+
     &:after {
         font-size: 0;
     }
