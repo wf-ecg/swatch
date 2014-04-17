@@ -1,7 +1,5 @@
-/* fun */
-@import "__def";
+/* CORE / functions */
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-//funcs
 
 @function gM ($num: 1) {
     @return $rem * $num;
