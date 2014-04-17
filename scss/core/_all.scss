@@ -1,5 +1,9 @@
 /* CORE */
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/reset";
+
 @import "core/_def";
 @import "core/_fun";
 @import "core/_mix";
